@@ -4,7 +4,7 @@
 <head>
   <title>Ravi Teja Bellam Portfolio</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -22,66 +22,13 @@
   <link rel="stylesheet" href="css/flaticon.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 
 
   <style>
-    input[type=text],
-    input[type=email],
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-      margin-top: 6px;
-      margin-bottom: 16px;
-      resize: vertical;
-      background-color: #beb7b7;
-    }
-
-    input[type=submit] {
-      padding: 12px 10px;
-      width: 200px;                     /* Set a specific width */
-      border: none;
-      border-radius: 18px;
-      cursor: pointer;
-      background-color: #565151;
-      color: #ffbd39;
-      display: block;          /* Make the input a block-level element */
-      margin: 0 auto;          /* Horizontally center the button */
-    }
-
-    .container {
-      border-radius: 4px;
-      padding: 5px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-top: 10px;
-      display: block;
-      color: #ffbd39;
-    }
-
-    #success-message {
-      display: none;
-      padding: 12px;
-      background-color: #070b07;
-      color: white;
-      border-radius: 4px;
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    /* Error Message Styling */
-    #error-message {
-      display: none;
-      padding: 12px;
-      background-color: #f44336;
-      color: white;
-      border-radius: 4px;
-      text-align: center;
-      margin-top: 20px;
+    html,
+    body {
+      overflow-x: hidden;
     }
 
 
@@ -103,7 +50,7 @@
     }
 
     .skill-mf .progress {
-      
+
       margin: .5rem 0 1.2rem 0;
       border-radius: 0;
       height: .7rem;
@@ -166,12 +113,147 @@
     .zoom-effect:hover {
       transform: scale(1.1);
     }
+
+    /* ///////////////////////////reach out//////////////*/
+
+    /* Button Styling */
+    .reach-out-btn {
+      position: fixed;
+      right: -50px;
+      top: 50%;
+      transform: rotate(-90deg);;
+      padding: 15px;
+      background-color: rgba(35, 21, 159, 0.7);
+      color: white;
+      border: none;
+      border-radius: 10%;
+      font-size: 15px;
+      cursor: pointer;
+      z-index: 100;
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    
+  
+    }
+
+    .reach-out-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Form Styling */
+    .contact-form {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 300px;
+      background-color: rgb(6, 6, 6);
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+      /* Initially hidden */
+      z-index: 99;
+    }
+
+    .contact-form .container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form label {
+      margin-bottom: 5px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .contact-form button,
+    .contact-form input[type="submit"] {
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover,
+    .contact-form input[type="submit"]:hover {
+      background-color: #218838;
+    }
+
+    input[type=text],
+    input[type=email],
+    textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+      background-color: #beb7b7;
+    }
+
+    input[type=submit] {
+      padding: 12px 10px;
+      width: 200px;
+      /* Set a specific width */
+      border: none;
+      border-radius: 18px;
+      cursor: pointer;
+      background-color: #565151;
+      color: #ffbd39;
+      display: block;
+      /* Make the input a block-level element */
+      margin: 0 auto;
+      /* Horizontally center the button */
+    }
+
+    .container {
+      border-radius: 4px;
+      padding: 5px;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #ffbd39;
+    }
+
+
+    /* Message Styling */
+    #success-message,
+    #error-message {
+      text-align: center;
+      font-size: 14px;
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 5px;
+    }
+
+    #success-message {
+      background-color: #d4edda;
+      color: #155724;
+    }
+
+    #error-message {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
   </style>
 
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
 
   <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
     <div class="container">
@@ -400,97 +482,112 @@
         </div>
       </div>
     </div>
+    <! -- ////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+      <button id="reachOutButton" class="reach-out-btn">Message me</button>
+
+      <!-- Contact Form -->
+      <div id="contactForm" class="contact-form">
+        <div class="container">
+          <!-- Form submission to Web3Forms with hidden iframe -->
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" target="hiddenIframe">
+            <input type="hidden" name="access_key" value="1239d39f-4b9d-4557-8196-5161e7a66ba6">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address.."
+              pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+
+            <label for="subject">Message</label>
+            <textarea id="subject" name="message"
+              placeholder="If you need any additional information, feel free to contact me. I'm happy to provide further details or answer any questions."
+              style="height:100px" required></textarea>
+
+            <input type="submit" value="Submit">
+          </form>
+
+          <!-- Success Message -->
+          <div id="success-message" style="display:none;">
+            <p>Thank you for your message! I will get back to you shortly.</p>
+          </div>
+
+          <!-- Error Message (if form submission fails) -->
+          <div id="error-message" style="display:none;">
+            <p>Oops! Something went wrong. Please try again later.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Hidden iframe to prevent page redirection -->
+      <iframe name="hiddenIframe" style="display:none;"></iframe>
+
+      <script>
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+          event.preventDefault(); // Prevent the default form submission
+
+          const formData = new FormData(this);
+
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+          })
+            .then(response => response.json())
+            .then(data => {
+              if (data.success) {
+                // Show success message
+                document.getElementById('success-message').style.display = 'block';
+
+                // Reset the form
+                document.getElementById('contact-form').reset();
+              } else {
+                // Show error message
+                document.getElementById('error-message').style.display = 'block';
+              }
+            })
+            .catch(error => {
+              console.error('Error submitting form:', error);
+              // Show error message
+              document.getElementById('error-message').style.display = 'block';
+            });
+        });
+
+        // Get the button and form elements
+        const reachOutButton = document.getElementById('reachOutButton');
+        const contactForm = document.getElementById('contactForm');
+
+        // Toggle the visibility of the form when the button is clicked
+        reachOutButton.addEventListener('click', () => {
+          contactForm.style.display = contactForm.style.display === 'none' || contactForm.style.display === '' ? 'block' : 'none';
+        });
+
+      </script>
 
 
 
 
-    <h3>Contact me for more information:</h3>
 
-<div class="container">
-  <!-- Form submission to Web3Forms with hidden iframe -->
-  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" target="hiddenIframe">
-    <input type="hidden" name="access_key" value="1239d39f-4b9d-4557-8196-5161e7a66ba6">
+      <!-- loader -->
 
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.easing.1.3.js"></script>
+      <script src="js/jquery.waypoints.min.js"></script>
+      <script src="js/jquery.stellar.min.js"></script>
+      <script src="js/owl.carousel.min.js"></script>
+      <script src="js/jquery.magnific-popup.min.js"></script>
+      <script src="js/aos.js"></script>
+      <script src="js/jquery.animateNumber.min.js"></script>
+      <script src="js/scrollax.min.js"></script>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="Enter your email address.." pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
-
-    <label for="subject">Message</label>
-    <textarea id="subject" name="message" placeholder="If you need any additional information, feel free to contact me. I'm happy to provide further details or answer any questions." style="height:100px" required></textarea>
-
-    <input type="submit" value="Submit">
-  </form>
-
-  <!-- Success Message -->
-  <div id="success-message" style="display:none;">
-    <p>Thank you for your message! I will get back to you shortly.</p>
-  </div>
-
-  <!-- Error Message (if form submission fails) -->
-  <div id="error-message" style="display:none;">
-    <p>Oops! Something went wrong. Please try again later.</p>
-  </div>
-</div>
-
-<!-- Hidden iframe to prevent page redirection -->
-<iframe name="hiddenIframe" style="display:none;"></iframe>
-
-<script>
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
-
-    const formData = new FormData(this);
-
-    fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.success) {
-        // Show success message
-        document.getElementById('success-message').style.display = 'block';
-
-        // Reset the form
-        document.getElementById('contact-form').reset();
-      } else {
-        // Show error message
-        document.getElementById('error-message').style.display = 'block';
-      }
-    })
-    .catch(error => {
-      console.error('Error submitting form:', error);
-      // Show error message
-      document.getElementById('error-message').style.display = 'block';
-    });
-  });
-</script>
-
-
-
-
-
-    <!-- loader -->
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-
-    <script src="js/main.js"></script>
+      <script src="js/main.js"></script>
 
 </body>
 
